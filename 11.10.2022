@@ -1,0 +1,49 @@
+# # zad1
+# def mult(a):
+#     sum=1
+#     for x in a:
+#         sum = sum * x
+#     return sum
+#
+# print(mult([3,5,7]))
+# print(mult(range(2,8,2)))
+
+# zad2
+# def mult_ints(a):
+#     sum = 1
+#     for x in a:
+#         if(type(x)==int):
+#             sum = sum * x
+#     return sum
+#
+# print(mult_ints([3,3.14,5,"abc",7]))
+
+# zad3
+# def mult(*args):
+#     sum=1
+#     for x in args:
+#         sum = sum * x
+#     return sum
+#
+# print(mult(3,5,7))
+
+# zad4
+# def mult_ints(*args):
+#     sum = 1
+#     for x in args:
+#         if(type(x)==int):
+#             sum = sum * x
+#     return sum
+#
+# print(mult_ints(3,3.14,5,"abc",7))
+
+# zad5
+#
+# def make_car(firma,model,**kwargs):
+#     slow=kwargs
+#     slow['firma']=firma
+#     slow['model']=model
+#
+#     return slow
+#
+# print(make_car('kk','123'))
