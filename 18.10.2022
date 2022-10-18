@@ -1,0 +1,90 @@
+import math
+#zad1
+
+# class Punkt(object):
+#     @staticmethod
+#     def distance(l1,l2):
+#         l1=l1
+#         l2=l2
+#         wyik = math.sqrt(math.pow(l2[0]-l1[0],2)+math.pow(l2[1]-l1[1],2))
+#         return wyik
+#
+# tab1=[16,12]
+# tab2=[12,13]
+# NazwanyPunkt =Punkt()
+# print(NazwanyPunkt.distance(tab1,tab2))
+
+# zad 2
+#
+# class Adres:
+#
+#     def __init__(self,numer_domu,ulice,misto,kod,nrm=None):
+#         self.numer_domu=numer_domu
+#         self.ulice=ulice
+#         self.misto=misto
+#         self.kod=kod
+#         if(nrm is not None):
+#             self.nrm = nrm
+#
+#     def Show(self):
+#         if(self.nrm is not None):
+#             print("ulica: "+self.ulice+" kod pocztowy: "+self.kod)
+#             print("miasto: "+self.misto)
+#         else:
+#             print("ulica: " + self.ulice + "kod pocztowy: " + self.kod)
+#             print("miasto: " + self.misto)
+#     def comes_before(self, other):
+#         print()
+#
+# nie jest skączone
+#
+# Adres1 = Adres("44","klop","kkk","12555","5")
+# Adres2 = Adres("44","klop","kkk","12585","7")
+# Adres.Show(Adres1)
+# Adres.Show(Adres2)
+
+#zad3
+
+# class SodaCan:
+#
+#     def __init__(self,wys,prom):
+#         self.wys =wys
+#         self.prom = prom
+#
+#     def get_surface_area(self):
+#         pp = math.pi*math.pow(self.prom,2)
+#         pb = 2*math.pi*self.prom*self.wys
+#         pc = 2*pp+pb
+#         return pc
+#
+#     def get_volume(self):
+#         obj =(math.pi*math.pow(self.prom,2))*self.wys
+#         return obj
+#
+#
+# can1 = SodaCan(12,6)
+# can2 = SodaCan(52,6)
+# can3 = SodaCan(2,7)
+#
+# print(SodaCan.get_volume(can1))
+# print(SodaCan.get_surface_area(can1))
+
+
+# zad4
+
+# class Car:
+#     def __init__(self,wydajnosc,pb):
+#         self.wydajnosc = wydajnosc
+#         self.pb = pb
+# 
+#     def add_fuel(self):
+#         dokonczyć
+
+
+
+
+
+
+
+
+
