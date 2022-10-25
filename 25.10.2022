@@ -1,0 +1,92 @@
+import sys
+
+
+class Wymierna:
+
+    def __init__(self, p=0, q=1):
+        if q < 0:
+            q = -1 * q
+        if q == 0:
+            sys.exit('podano zle dane')
+        if p > q:
+            for x in range(p+1, 1,-1):
+                if p % x == 0 and q % x == 0:
+                    p = p // x
+                    q = q // x
+        elif q > p:
+            for x in range(p+1,1,-1):
+                if p % x == 0 and q % x == 0:
+                    p = p // x
+                    q = q // x
+        else:
+            q = 1
+            p = 1
+        self.p = p
+        self.q = q
+
+    def get_licznik(self):
+        return self.p
+
+    def get_mianownik(self):
+        return self.q
+
+    def __repr__(self):
+        return f'{self.p} / {self.q}'
+
+    def __float__(self):
+        b = self.p // self.q
+        a = float(b)
+        return a
+
+    def __add__(self, other):
+        y = self.q * other.q
+        x = (self.p * other.q) + (other.p * self.q)
+        return Wymierna(x, y)
+
+    def __sub__(self, other):
+        y = self.q * other.q
+        x = (self.p * other.q) - (other.p * self.q)
+        return Wymierna(x, y)
+    # zadanie 1 podpunkt f
+    # def __eq__(self, other):
+    #     return self.q / self.p == other.q / other.p
+
+    def __ne__(self, other):
+        return self.q / self.p != other.q / other.p
+
+    def __lt__(self, other):
+        return self.q / self.p < other.q / other.p
+
+    def __le__(self, other):
+        return self.q / self.p <= other.q / other.p
+
+    def __gt__(self, other):
+        return self.q / self.p > other.q / other.p
+
+    def __ge__(self, other):
+        return self.q / self.p >= other.q / other.p
+
+    def __mul__(self, other):
+        x = self.q * other.q
+        y = self.p * other.p
+        return Wymierna(x, y)
+
+    def __div__(self, other):
+        x = self.q * other.p
+        y = self.p * other.q
+        return Wymierna(x, y)
+    #zadanie 3
+
+    def __eq__(self, other):
+        if not (self.p > other.p > self.p) and (self.q > other.q > self.q):
+            return 1==1
+
+
+
+zmn = Wymierna(18, 9)
+print(zmn)
+# print(zmn.get_mianownik())
+# print(repr(zmn))
+# zmn2 = Wymierna(4, 5)
+# result1 = zmn2 - zmn
+# print(result1.p, result1.q)
