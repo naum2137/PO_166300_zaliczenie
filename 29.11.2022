@@ -1,0 +1,105 @@
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("podaj n");
+        Integer n = scan.nextInt();
+
+        if (n > 0){
+
+            float[] tab = new float[n];
+            for (int i =0; i<n ; i++){
+                System.out.println("podaj a_" + i);
+                Scanner scan1 = new Scanner(System.in);
+                Float b = scan1.nextFloat();
+                tab[i]=b;
+            }
+
+//            a
+            float a = 0;
+            for (int i = 0; i<n ; i++){
+                a = a + tab[i];
+            }
+            System.out.println(a);
+
+//            b
+            float b = 1;
+            for (int i = 0; i<n ; i++){
+                b = b * tab[i];
+            }
+            System.out.println(b);
+
+//            c
+            float c = 0;
+            for (int i = 0; i<n ; i++){
+                c = c + Math.abs(tab[i]);
+            }
+            System.out.println(c);
+
+//            d
+            double d =  0;
+            for (int i = 0; i<n ; i++){
+                d = d + Math.abs(Math.sqrt(tab[i]));
+            }
+            System.out.println(d);
+
+//            e
+            double e =  0;
+            for (int i = 0; i<n ; i++){
+                e = e * Math.abs(tab[i]);
+            }
+            System.out.println(e);
+
+//            f
+            double f =  1;
+            for (int i = 0; i<n ; i++){
+                f = f + Math.pow(tab[i],2);
+            }
+            System.out.println(f);
+
+//            g
+            double g1 =  0;
+            double g2 =  1;
+            for (int i = 0; i<n ; i++){
+                g1 = g1 + tab[i];
+                g2 = g2 * tab[i];
+            }
+            System.out.println(g1);
+            System.out.println(g2);
+
+//          h
+            double h =  0;
+            for (int i = 0; i<n ; i++){
+                h = h + (Math.pow(-1,i + 1) * tab[i]);
+            }
+            System.out.println(h);
+
+//            i
+            double I =  0;
+            int fact=1;
+
+
+            for (int i = 0; i<n ; i++){
+                int number = i;
+                for(int oo=1;oo<=number;oo++){
+                    fact=fact*oo;
+                }
+
+                I = I + ((Math.pow(-1,i) * tab[i])/fact);
+            }
+            System.out.println(I);
+
+
+
+
+
+        } else {
+            System.out.println("liczba musi byc naturalna");
+        }
+
+//        System.out.println(n);
+    }
+}
