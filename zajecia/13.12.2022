@@ -1,0 +1,129 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+
+//        Scanner Scanner = new Scanner(System.in);
+
+        Random rand = new Random();
+        int n = rand.nextInt(99)+1;
+//        System.out.println(n);
+
+        int tab[] = new int[n];
+
+        for (int i = 0 ; i < n ;i++){
+            tab[i] = rand.nextInt(1999)-999;
+            System.out.println(tab[i]);
+        }
+
+//        zad 1a
+        int parzyste = 0;
+        int nieparzyste = 0;
+
+        for (int i = 0 ; i < n ;i++){
+           if (tab[i] % 2 == 0) {
+               parzyste += 1;
+
+           }else {
+               nieparzyste += 1;
+
+           }
+        }
+//        System.out.println(parzyste);
+//        System.out.println(nieparzyste);
+
+//        1b
+
+        int wienkrze = 0;
+        int mniejsze = 0;
+        int zerowe = 0;
+
+        for (int i = 0 ; i < n ;i++){
+            if (tab[i] < 0) {
+                mniejsze += 1;
+            } else if (tab[i] > 0) {
+                wienkrze += 1;
+            }else{
+                zerowe += 1;
+            }
+        }
+//        System.out.println(mniejsze);
+//        System.out.println(wienkrze);
+//        System.out.println(zerowe);
+
+//        1c
+
+        int najwiekrzy = tab[0];
+        int ile1 = 0;
+
+        for (int i = 0 ; i < n ;i++){
+            if (tab[i] > najwiekrzy) {
+                najwiekrzy = tab[i];
+            }
+        }
+
+        for (int i = 0 ; i < n ;i++){
+            if (najwiekrzy == tab[i]) {
+                ile1 += 1;
+            }
+        }
+
+//        System.out.println(najwiekrzy);
+//        System.out.println(ile1);
+
+//        1e
+        int dlu = 0;
+        int pom = 0;
+
+        for (int i = 0 ; i < n ;i++){
+            if (tab[i] > -1) {
+                pom += 1;
+            }else {
+                pom = 0;
+            }
+            if (pom > dlu){
+                dlu = pom;
+            }
+        }
+
+//        System.out.println(dlu);
+
+//        1d
+        int dod = 0;
+        int uje = 0;
+        for (int i = 0 ; i < n ;i++){
+            if (tab[i] < 0) {
+                uje += 1;
+            } else if (tab[i] >= 0) {
+                dod += 1;
+            }
+        }
+//        System.out.println(dod);
+//        System.out.println(uje);
+//        1f
+//        for (int i = 0 ; i < n ;i++){
+//            if (tab[i] < 0) {
+//                tab[i] = -1;
+//            } else if (tab[i] >= 0) {
+//                tab[i] = 1;
+//            }
+//            System.out.println(tab[i]);
+//        }
+
+//        1g
+        Scanner scanner = new Scanner(System.in);
+        int lewy = scanner.nextInt();
+        int prawy = scanner.nextInt();
+//        System.out.println(lewy);
+//        System.out.println(prawy);
+
+//        for (int i = 0 ; i < n ;i++){
+//
+//        }
+
+
+
+
+    }
+}
