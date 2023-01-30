@@ -1,8 +1,9 @@
 package zadanie1;
 
+import java.util.Comparator;
 import java.util.Date;
 
-public class CordlessVacuumCleaner extends VacuumCleaner implements Cloneable{
+public class CordlessVacuumCleaner extends VacuumCleaner implements Cloneable {
     private final int id;
     private Date dateOfProd = null;
 
@@ -43,6 +44,9 @@ public class CordlessVacuumCleaner extends VacuumCleaner implements Cloneable{
         return id == kkk.id;
 
     }
+
+
+
 
 
 }
