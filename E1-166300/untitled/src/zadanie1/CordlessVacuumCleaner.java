@@ -2,7 +2,7 @@ package zadanie1;
 
 import java.util.Date;
 
-public class CordlessVacuumCleaner extends VacuumCleaner implements Cloneable {
+public class CordlessVacuumCleaner extends VacuumCleaner implements Cloneable{
     private final int id;
     private Date dateOfProd = null;
 
@@ -30,6 +30,19 @@ public class CordlessVacuumCleaner extends VacuumCleaner implements Cloneable {
 
     @Override
     public boolean equals(Object obj) {
-        if(this)
+        if(this == obj){
+            return true;
+        }
+        if (obj == null){
+            return false;
+        }
+        if(getClass() != obj.getClass()){
+            return false;
+        }
+        CordlessVacuumCleaner kkk = (CordlessVacuumCleaner) obj;
+        return id == kkk.id;
+
     }
+
+
 }

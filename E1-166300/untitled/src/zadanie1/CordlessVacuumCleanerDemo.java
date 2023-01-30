@@ -1,13 +1,14 @@
 package zadanie1;
 
 public class CordlessVacuumCleanerDemo {
-    public static void main(String[] args){
+    public static void main(String[] args) throws CloneNotSupportedException{
         VacuumCleaner p = new CordlessVacuumCleaner("Elektorlux", 1729);
         System.out.println(p.getName());
         CordlessVacuumCleaner s = (CordlessVacuumCleaner) p;
         System.out.println(s.getName());
-        /*
+/*
         Named n = s;
+
         System.out.println(n.getName());
         CordlessVacuumCleaner d = s.clone();
         System.out.println(d.getName());
